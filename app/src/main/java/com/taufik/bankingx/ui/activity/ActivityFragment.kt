@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.taufik.bankingx.R
 import com.taufik.bankingx.databinding.FragmentActivityBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,6 +25,12 @@ class ActivityFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        initToolbarHeader()
+    }
+
+    private fun initToolbarHeader() {
+        binding.toolbarActivity.tvTitle.text = getString(R.string.txt_activity)
     }
 
     override fun onDestroyView() {
