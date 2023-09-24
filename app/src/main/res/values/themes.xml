@@ -2,8 +2,12 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.BankingX" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/lavender_100</item>
     </style>
 
     <style name="Theme.BankingX" parent="Base.Theme.BankingX" />
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
