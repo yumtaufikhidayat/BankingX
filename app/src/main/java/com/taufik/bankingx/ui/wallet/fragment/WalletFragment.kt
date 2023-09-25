@@ -1,4 +1,4 @@
-package com.taufik.bankingx.ui.wallet
+package com.taufik.bankingx.ui.wallet.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.bankingx.R
 import com.taufik.bankingx.databinding.FragmentWalletBinding
+import com.taufik.bankingx.ui.wallet.viewmodel.WalletViewModel
+import com.taufik.bankingx.ui.wallet.adapter.WalletAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

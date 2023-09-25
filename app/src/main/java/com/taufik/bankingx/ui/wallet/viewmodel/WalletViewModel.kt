@@ -1,4 +1,4 @@
-package com.taufik.bankingx.ui.wallet
+package com.taufik.bankingx.ui.wallet.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

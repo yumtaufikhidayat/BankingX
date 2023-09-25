@@ -1,4 +1,4 @@
-package com.taufik.bankingx.ui.wallet
+package com.taufik.bankingx.ui.wallet.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.taufik.bankingx.databinding.ItemWalletBinding
 import com.taufik.bankingx.model.wallet.Wallet
 class WalletAdapter: ListAdapter<Wallet, WalletAdapter.ViewHolder>(WALLET_DIFF_CALLBACK) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WalletAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             ItemWalletBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -19,7 +19,7 @@ class WalletAdapter: ListAdapter<Wallet, WalletAdapter.ViewHolder>(WALLET_DIFF_C
         )
     }
 
-    override fun onBindViewHolder(holder: WalletAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
