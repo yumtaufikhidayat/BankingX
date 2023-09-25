@@ -22,7 +22,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/outline_notifications"
+        android:src="@drawable/ic_notification_badge"
         app:layout_constraintTop_toTopOf="@id/imgProfile"
         app:layout_constraintBottom_toBottomOf="@id/imgProfile"
         app:layout_constraintEnd_toStartOf="@id/imgProfile"/>
