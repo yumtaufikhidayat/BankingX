@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_splash_screen" />
     <fragment
         android:id="@+id/walletFragment"
-        android:name="com.taufik.bankingx.ui.wallet.WalletFragment"
+        android:name="com.taufik.bankingx.ui.wallet.fragment.WalletFragment"
         android:label="fragment_wallet"
         tools:layout="@layout/fragment_wallet" />
     <fragment
@@ -22,7 +22,37 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/activityFragment"
-        android:name="com.taufik.bankingx.ui.activity.ActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.ActivityFragment"
         android:label="fragment_activity"
         tools:layout="@layout/fragment_activity" />
+    <fragment
+        android:id="@+id/weekActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.WeekActivityFragment"
+        android:label="fragment_week_activity"
+        tools:layout="@layout/fragment_week_activity" />
+    <fragment
+        android:id="@+id/monthActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.MonthActivityFragment"
+        android:label="fragment_month_activity"
+        tools:layout="@layout/fragment_month_activity" />
+    <fragment
+        android:id="@+id/yearActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.YearActivityFragment"
+        android:label="fragment_year_activity"
+        tools:layout="@layout/fragment_year_activity" />
+    <fragment
+        android:id="@+id/allActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.AllActivityFragment"
+        android:label="fragment_all_activity"
+        tools:layout="@layout/fragment_all_activity" />
+    <fragment
+        android:id="@+id/expensesActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.ExpensesActivityFragment"
+        android:label="fragment_expenses_activity"
+        tools:layout="@layout/fragment_expenses_activity" />
+    <fragment
+        android:id="@+id/incomeActivityFragment"
+        android:name="com.taufik.bankingx.ui.activity.fragment.IncomeActivityFragment"
+        android:label="fragment_income_activity"
+        tools:layout="@layout/fragment_income_activity" />
 </navigation>
