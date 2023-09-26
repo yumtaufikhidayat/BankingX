@@ -6,7 +6,11 @@ import javax.inject.Inject
 class BankingXRepository @Inject constructor(
     private val localDataSource: LocalDataSource
 ) {
-    suspend fun insertWallets() = localDataSource.insertWallets()
+    fun insertWallets() = localDataSource.insertWallets()
 
     fun getAllWallets() = localDataSource.getAllWallets()
+
+    fun insertAllActivity() = localDataSource.insertAllActivity()
+
+    fun getAllActivities() = localDataSource.getAllActivities()
 }

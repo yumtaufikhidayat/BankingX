@@ -6,7 +6,11 @@ import javax.inject.Inject
 class LocalDataSource @Inject constructor(
     private val dao: BankingXDao
 ) {
-    suspend fun insertWallets() = dao.insertWallet(DummyData.listOfWallets())
+    fun insertWallets() = dao.insertWallet(DummyData.listOfWallets())
 
     fun getAllWallets() = dao.getAllWallets()
+
+    fun insertAllActivity() = dao.insertAllActivity(DummyData.listOfAllActivities())
+
+    fun getAllActivities() = dao.getAllActivities()
 }
