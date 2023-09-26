@@ -37,7 +37,7 @@ class WalletFragment : Fragment() {
 
         setHeaderTitle()
         initAdapter()
-        getAllWallets()
+        getAllWalletsObserver()
     }
 
     private fun setHeaderTitle() {
@@ -52,7 +52,7 @@ class WalletFragment : Fragment() {
         }
     }
 
-    private fun getAllWallets() {
+    private fun getAllWalletsObserver() {
         lifecycleScope.launch {
             viewModel.getAllWallets().observe(viewLifecycleOwner) {
                 walletAdapter.submitList(it)
