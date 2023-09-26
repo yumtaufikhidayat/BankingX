@@ -105,4 +105,8 @@ dependencies {
     val hiltVersion = "2.48"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+
+    // Android Chart
+    val chartVersion = "3.1.0"
+    implementation("com.github.PhilJay:MPAndroidChart:v$chartVersion")
 }
