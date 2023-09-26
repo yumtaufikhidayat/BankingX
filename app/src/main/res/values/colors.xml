@@ -10,6 +10,7 @@
     <color name="lavender_300">#363062</color>
     <color name="green_100">#9CEA38</color>
     <color name="green_200">#44A159</color>
+    <color name="green_300">#009F5E</color>
     <color name="magenta_100">#FFC785</color>
     <color name="magenta_200">#DA1CC7</color>
 </resources>
