@@ -13,4 +13,6 @@ class LocalDataSource @Inject constructor(
     fun insertAllActivity() = dao.insertAllActivity(DummyData.listOfAllActivities())
 
     fun getAllActivities() = dao.getAllActivities()
+
+    fun getAllChartDataset() = DummyData.getLineDataSet()
 }
