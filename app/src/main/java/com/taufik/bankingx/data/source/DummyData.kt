@@ -1,5 +1,6 @@
 package com.taufik.bankingx.data.source
 
+import com.github.mikephil.charting.data.Entry
 import com.taufik.bankingx.R
 import com.taufik.bankingx.model.activity.AllActivity
 import com.taufik.bankingx.model.wallet.Wallet
@@ -72,5 +73,24 @@ object DummyData {
             )
         )
         return list
+    }
+
+    fun getLineDataSet(): ArrayList<Entry> {
+        val lineValues: ArrayList<Entry> = arrayListOf()
+        lineValues.apply {
+            add(Entry(10f, 1F))
+            add(Entry(20f, 4F))
+            add(Entry(30f, 3F))
+            add(Entry(40f, 4F))
+            add(Entry(50f, 2F))
+            add(Entry(60f, 4F))
+            add(Entry(70f, 6F))
+            add(Entry(80f, 5F))
+            add(Entry(90f, 5F))
+            add(Entry(100f, 7F))
+            add(Entry(110f, 8F))
+            add(Entry(120f, 6F))
+        }
+        return lineValues
     }
 }
