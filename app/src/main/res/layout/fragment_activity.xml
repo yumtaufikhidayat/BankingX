@@ -28,7 +28,7 @@
         app:tabIndicatorFullWidth="true"
         app:tabPaddingStart="25dp"
         app:tabPaddingEnd="25dp"
-        app:tabIndicatorAnimationMode="linear"
+        app:tabIndicatorAnimationMode="elastic"
         app:layout_constraintTop_toBottomOf="@id/toolbarActivity"
         app:layout_constraintStart_toStartOf="@id/toolbarActivity"/>
 
