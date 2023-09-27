@@ -24,7 +24,7 @@
         app:tabGravity="center"
         app:tabIndicatorGravity="stretch"
         app:tabSelectedTextColor="@color/white"
-        app:tabIndicator="@drawable/bg_tab"
+        app:tabIndicator="@drawable/bg_tab_dark"
         app:tabIndicatorFullWidth="true"
         app:tabPaddingStart="25dp"
         app:tabPaddingEnd="25dp"
