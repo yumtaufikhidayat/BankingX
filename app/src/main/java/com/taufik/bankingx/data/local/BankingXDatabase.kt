@@ -3,12 +3,14 @@ package com.taufik.bankingx.data.local
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.taufik.bankingx.model.activity.AllActivity
+import com.taufik.bankingx.model.home.Home
 import com.taufik.bankingx.model.wallet.Wallet
 
 @Database(
     entities = [
         Wallet::class,
-        AllActivity::class
+        AllActivity::class,
+        Home::class
     ],
     version = 1,
     exportSchema = false

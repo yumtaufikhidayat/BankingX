@@ -3,6 +3,7 @@ package com.taufik.bankingx.data.source
 import com.github.mikephil.charting.data.Entry
 import com.taufik.bankingx.R
 import com.taufik.bankingx.model.activity.AllActivity
+import com.taufik.bankingx.model.home.Home
 import com.taufik.bankingx.model.wallet.Wallet
 
 object DummyData {
@@ -92,5 +93,15 @@ object DummyData {
             add(Entry(120f, 6F))
         }
         return lineValues
+    }
+
+    fun getHomeList(): ArrayList<Home> {
+        val homeList: ArrayList<Home> = arrayListOf()
+        homeList.apply {
+            add(Home(id = 1, resource = R.drawable.ic_add_card, name = "Add Wallet"))
+            add(Home(id = 2, resource = R.drawable.ic_statement, name = "Statement"))
+            add(Home(id = 3, resource = R.drawable.ic_transactions, name = "Transactions"))
+        }
+        return homeList
     }
 }

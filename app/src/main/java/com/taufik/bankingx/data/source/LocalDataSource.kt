@@ -15,4 +15,8 @@ class LocalDataSource @Inject constructor(
     fun getAllActivities() = dao.getAllActivities()
 
     fun getAllChartDataset() = DummyData.getLineDataSet()
+
+    fun insertAllHomeMenu() = dao.insertAllHomeMenu(DummyData.getHomeList())
+
+    fun getAllHomeMenu() = dao.getAllHomeMenu()
 }

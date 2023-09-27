@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.taufik.bankingx.model.activity.AllActivity
+import com.taufik.bankingx.model.home.Home
 import com.taufik.bankingx.model.wallet.Wallet
 
 @Dao
@@ -22,4 +23,10 @@ interface BankingXDao {
 
     @Query("SELECT * FROM allactivity")
     fun getAllActivities(): LiveData<List<AllActivity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAllHomeMenu(listOfHomeMenu: List<Home>)
+
+    @Query("SELECT * FROM home")
+    fun getAllHomeMenu(): LiveData<List<Home>>
 }

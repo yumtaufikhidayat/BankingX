@@ -15,4 +15,8 @@ class BankingXRepository @Inject constructor(
     fun getAllActivities() = localDataSource.getAllActivities()
 
     fun getAllChartDataset() = localDataSource.getAllChartDataset()
+
+    fun insertAllHomeMenu() = localDataSource.insertAllHomeMenu()
+
+    fun getAllHomeMenu() = localDataSource.getAllHomeMenu()
 }
