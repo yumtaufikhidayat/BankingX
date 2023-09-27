@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.taufik.bankingx.databinding.ItemHomeBinding
 import com.taufik.bankingx.model.home.Home
 
-class HomeAdapter(private val onClick: (Int) -> Int) : ListAdapter<Home, HomeAdapter.ViewHolder>(HOME_DIFF_CALLBACK) {
+class HomeAdapter(private val onClick: (Int) -> Unit) : ListAdapter<Home, HomeAdapter.ViewHolder>(HOME_DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -29,10 +29,11 @@ class HomeAdapter(private val onClick: (Int) -> Int) : ListAdapter<Home, HomeAda
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Home) {
             binding.apply {
-                imgMenu.setImageDrawable(ContextCompat.getDrawable(itemView.context, data.resource))
+                imgMenu.setImageDrawable(ContextCompat.getDrawable(itemView.context, data.resourceImage))
+                cardBgMenu.setCardBackgroundColor(ContextCompat.getColor(itemView.context, data.backgroundColor))
                 tvMenuName.text = data.name
                 clHome.setOnClickListener {
-                    onClick(data.id)
+                    onClick(adapterPosition)
                 }
             }
         }
