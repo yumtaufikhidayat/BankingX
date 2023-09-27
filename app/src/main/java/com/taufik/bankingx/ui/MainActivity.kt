@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
     private var navController: NavController? = null
     private val navControllerDestination = NavController.OnDestinationChangedListener { _, destination, _ ->
         when (destination.id) {
-            R.id.splashScreenFragment -> {
+            R.id.splashScreenFragment,
+            R.id.homeFragment -> {
                 showBottomNavigation(false)
                 showFabCardViewHome(false)
             }
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         setNavHost()
         setUpNavigationDestination()
+        navigateToHome()
     }
 
     private fun setNavHost() {
@@ -45,6 +47,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpNavigationDestination() {
         navController?.addOnDestinationChangedListener(navControllerDestination)
+    }
+
+    private fun navigateToHome() {
+        binding.fabHome.setOnClickListener {
+            navController?.navigate(R.id.homeFragment)
+        }
     }
 
     private fun showFabCardViewHome(isShow: Boolean) {
