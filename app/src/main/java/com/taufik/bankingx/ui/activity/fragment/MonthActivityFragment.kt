@@ -11,7 +11,7 @@ import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.components.XAxis.XAxisPosition
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.github.mikephil.charting.formatter.ValueFormatter
 import com.taufik.bankingx.R
 import com.taufik.bankingx.databinding.FragmentMonthActivityBinding
 import com.taufik.bankingx.ui.activity.viewmodel.ChartDatasetViewModel
@@ -87,7 +87,17 @@ class MonthActivityFragment : Fragment() {
                 xAxiss.position = XAxisPosition.BOTTOM
                 xAxiss.isGranularityEnabled = true
                 xAxiss.granularity = 0f
-                xAxiss.valueFormatter = IndexAxisValueFormatter(xAxisLabels)
+                xAxiss.valueFormatter = object : ValueFormatter() {
+                    override fun getFormattedValue(value: Float): String {
+                        val indexOfData = chartDataset.indexOfFirst {
+                            it.x == value
+                        }
+                        return when(indexOfData) {
+                            in 0 until 12 -> xAxisLabels[indexOfData]
+                            else -> ""
+                        }
+                    }
+                }
             }
         }
     }
