@@ -55,4 +55,14 @@
         android:name="com.taufik.bankingx.ui.activity.fragment.IncomeActivityFragment"
         android:label="fragment_income_activity"
         tools:layout="@layout/fragment_income_activity" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.taufik.bankingx.ui.transactions.fragment.TransactionsFragment"
+        android:label="fragment_transactions"
+        tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/allTransactionsFragment"
+        android:name="com.taufik.bankingx.ui.transactions.fragment.AllTransactionsFragment"
+        android:label="fragment_all_transactions"
+        tools:layout="@layout/fragment_all_transactions" />
 </navigation>

@@ -19,4 +19,8 @@ class BankingXRepository @Inject constructor(
     fun insertAllHomeMenu() = localDataSource.insertAllHomeMenu()
 
     fun getAllHomeMenu() = localDataSource.getAllHomeMenu()
+
+    fun insertAllTransactions() = localDataSource.insertAllTransactions()
+
+    fun getAllTransactions() = localDataSource.getAllTransactions()
 }

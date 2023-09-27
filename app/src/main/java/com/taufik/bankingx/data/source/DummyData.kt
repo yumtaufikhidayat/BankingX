@@ -4,6 +4,7 @@ import com.github.mikephil.charting.data.Entry
 import com.taufik.bankingx.R
 import com.taufik.bankingx.model.activity.AllActivity
 import com.taufik.bankingx.model.home.Home
+import com.taufik.bankingx.model.transactions.AllTransactions
 import com.taufik.bankingx.model.wallet.Wallet
 
 object DummyData {
@@ -98,10 +99,115 @@ object DummyData {
     fun getHomeList(): ArrayList<Home> {
         val homeList: ArrayList<Home> = arrayListOf()
         homeList.apply {
-            add(Home(id = 1, resource = R.drawable.ic_add_card, name = "Add Wallet"))
-            add(Home(id = 2, resource = R.drawable.ic_statement, name = "Statement"))
-            add(Home(id = 3, resource = R.drawable.ic_transactions, name = "Transactions"))
+            add(
+                Home(
+                    id = 1,
+                    resourceImage = R.drawable.ic_add_card,
+                    name = "Add Wallet",
+                    backgroundColor = R.color.green_200
+                )
+            )
+            add(
+                Home(
+                    id = 2,
+                    resourceImage = R.drawable.ic_statement,
+                    name = "Statement",
+                    backgroundColor = R.color.lavender_200
+                )
+            )
+            add(
+                Home(
+                    id = 3,
+                    resourceImage = R.drawable.ic_transactions,
+                    name = "Transactions",
+                    backgroundColor = R.color.magenta_100
+                )
+            )
         }
         return homeList
+    }
+
+    fun getAllTransactions(): ArrayList<AllTransactions> {
+        val allTransactionsList :ArrayList<AllTransactions> = arrayListOf()
+        allTransactionsList.apply {
+            add(
+                AllTransactions(
+                    transactionsId = 1,
+                    profileImage = R.drawable.bank_logo_1,
+                    profileName = "Green Bank",
+                    transactionsStatus = "Withdraw",
+                    transactionsBalance = "\$800",
+                    transactionsTimestamp = "4d ago",
+                    backgroundColor = R.color.green_400
+                )
+            )
+            add(
+                AllTransactions(
+                    transactionsId = 2,
+                    profileImage = R.drawable.bank_logo_2,
+                    profileName = "Legendary Bank",
+                    transactionsStatus = "Top Up",
+                    transactionsBalance = "-\$1,000",
+                    transactionsTimestamp = "1w ago",
+                    backgroundColor = R.color.black_100
+                )
+            )
+            add(
+                AllTransactions(
+                    transactionsId = 3,
+                    profileImage = R.drawable.bank_logo_3,
+                    profileName = "Bitkoin",
+                    transactionsStatus = "SELL",
+                    transactionsBalance = "-\$540",
+                    transactionsTimestamp = "1w ago",
+                    backgroundColor = R.color.orange_100
+                )
+            )
+            add(
+                AllTransactions(
+                    transactionsId = 4,
+                    profileImage = R.drawable.bank_logo_4,
+                    profileName = "Kaya Bank",
+                    transactionsStatus = "Top Up",
+                    transactionsBalance = "\$850",
+                    transactionsTimestamp = "4d ago",
+                    backgroundColor = R.color.white_100
+                )
+            )
+            add(
+                AllTransactions(
+                    transactionsId = 5,
+                    profileImage = R.drawable.profile1,
+                    profileName = "Olivia Johanson",
+                    transactionsStatus = "Transfer",
+                    transactionsBalance = "\$432.9",
+                    transactionsTimestamp = "3.30 AM",
+                    backgroundColor = R.color.white_200
+                )
+            )
+            add(
+                AllTransactions(
+                    transactionsId = 6,
+                    profileImage = R.drawable.bank_logo_5,
+                    profileName = "Purple Bank",
+                    transactionsStatus = "Withdraw",
+                    transactionsBalance = "\$800",
+                    transactionsTimestamp = "4d ago",
+                    backgroundColor = R.color.magenta_300
+                )
+            )
+            add(
+                AllTransactions(
+                    transactionsId = 7,
+                    profileImage = R.drawable.bank_logo_2,
+                    profileName = "Legendary Bank",
+                    transactionsStatus = "Top Up",
+                    transactionsBalance = "-\$1,000",
+                    transactionsTimestamp = "1w ago",
+                    backgroundColor = R.color.black_100
+                )
+            )
+        }
+        return allTransactionsList
     }
 }

@@ -19,4 +19,8 @@ class LocalDataSource @Inject constructor(
     fun insertAllHomeMenu() = dao.insertAllHomeMenu(DummyData.getHomeList())
 
     fun getAllHomeMenu() = dao.getAllHomeMenu()
+
+    fun insertAllTransactions() = dao.insertAllTransactions(DummyData.getAllTransactions())
+
+    fun getAllTransactions() = dao.getAllTransactions()
 }
