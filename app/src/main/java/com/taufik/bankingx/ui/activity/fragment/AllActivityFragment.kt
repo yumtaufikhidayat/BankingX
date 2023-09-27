@@ -46,10 +46,8 @@ class AllActivityFragment : Fragment() {
     }
 
     private fun getAllActivityObserver() {
-        lifecycleScope.launch {
-            viewModel.getAllActivities().observe(viewLifecycleOwner) {
-                allActivityAdapter.submitList(it)
-            }
+        viewModel.getAllActivities().observe(viewLifecycleOwner) {
+            allActivityAdapter.submitList(it)
         }
     }
 
