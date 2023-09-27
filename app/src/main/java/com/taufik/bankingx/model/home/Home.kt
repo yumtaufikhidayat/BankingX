@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 data class Home(
     @PrimaryKey
     val id: Int,
-    val resource: Int,
+    val resourceImage: Int,
+    val backgroundColor: Int,
     val name: String
 )
