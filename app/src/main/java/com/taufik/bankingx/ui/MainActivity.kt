@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
     private val navControllerDestination = NavController.OnDestinationChangedListener { _, destination, _ ->
         when (destination.id) {
             R.id.splashScreenFragment,
-            R.id.homeFragment -> {
+            R.id.homeFragment,
+            R.id.transactionsFragment,
+            R.id.allTransactionsFragment -> {
                 showBottomNavigation(false)
                 showFabCardViewHome(false)
             }
