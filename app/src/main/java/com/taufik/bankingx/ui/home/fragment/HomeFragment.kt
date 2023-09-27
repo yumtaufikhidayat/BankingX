@@ -25,9 +25,9 @@ class HomeFragment : Fragment() {
     private val viewModel by viewModels<HomeViewModel>()
     private val homeAdapter by lazy { HomeAdapter {
         when (it) {
-            1 -> Log.i("TAG1", "message: $it")
-            2 -> Log.i("TAG2", "message: $it")
-            3 -> Log.i("TAG3", "message: $it")
+            0 -> Log.i("TAG1", "message: $it")
+            1 -> Log.i("TAG2", "message: $it")
+            2 -> navigateScreen(R.id.transactionsFragment)
             else -> Log.i("TAG4", "message: $it")
         }
     } }
@@ -69,6 +69,10 @@ class HomeFragment : Fragment() {
         viewModel.getAllHomeMenu().observe(viewLifecycleOwner) {
             homeAdapter.submitList(it)
         }
+    }
+
+    private fun navigateScreen(direction: Int) {
+        findNavController().navigate(direction)
     }
 
     override fun onDestroyView() {
