@@ -42,7 +42,6 @@ class AddWalletFragment : Fragment() {
         addWalletSkinObserver()
         inputCardName()
         inputCardNumber()
-        inputExpiryCard()
     }
 
     private fun initToolbar() {
@@ -100,29 +99,6 @@ class AddWalletFragment : Fragment() {
                 backgroundAddWallet.tvCCNumber.text = processed
             })
         }
-    }
-
-    private fun inputExpiryCard() {
-        binding.tieExpiredDate.addTextChangedListener(afterTextChanged = { s ->
-            var lock = false
-            s?.let {
-                if (lock || s.length > 16) {
-                    return@let
-                }
-                lock = true
-                run {
-                    var i = 4
-                    while (i < s.length) {
-                        if (s.toString()[i] !== ' ') {
-                            s.insert(i, " ")
-                        }
-                        i += 5
-                    }
-                }
-                lock = false
-            }
-
-        })
     }
 
     override fun onDestroyView() {
