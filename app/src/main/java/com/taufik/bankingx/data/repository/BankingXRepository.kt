@@ -23,4 +23,8 @@ class BankingXRepository @Inject constructor(
     fun insertAllTransactions() = localDataSource.insertAllTransactions()
 
     fun getAllTransactions() = localDataSource.getAllTransactions()
+
+    fun insertAllWalletSkins() = localDataSource.insertAllWalletSkins()
+
+    fun getAllWalletSkins() = localDataSource.getAllWalletSkins()
 }

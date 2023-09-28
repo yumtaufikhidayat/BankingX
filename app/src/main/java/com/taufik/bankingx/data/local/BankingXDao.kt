@@ -8,6 +8,7 @@ import androidx.room.Query
 import com.taufik.bankingx.model.activity.AllActivity
 import com.taufik.bankingx.model.home.Home
 import com.taufik.bankingx.model.transactions.AllTransactions
+import com.taufik.bankingx.model.wallet.AddWallet
 import com.taufik.bankingx.model.wallet.Wallet
 
 @Dao
@@ -36,4 +37,10 @@ interface BankingXDao {
 
     @Query("SELECT * FROM alltransactions")
     fun getAllTransactions(): LiveData<List<AllTransactions>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAllWalletSkins(listOfAllWalletSkins: List<AddWallet>)
+
+    @Query("SELECT * FROM addwallet")
+    fun getAllWalletSkins(): LiveData<List<AddWallet>>
 }

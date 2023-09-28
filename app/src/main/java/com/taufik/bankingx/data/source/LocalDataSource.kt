@@ -23,4 +23,8 @@ class LocalDataSource @Inject constructor(
     fun insertAllTransactions() = dao.insertAllTransactions(DummyData.getAllTransactions())
 
     fun getAllTransactions() = dao.getAllTransactions()
+
+    fun insertAllWalletSkins() = dao.insertAllWalletSkins(DummyData.getAllWalletSkins())
+
+    fun getAllWalletSkins() = dao.getAllWalletSkins()
 }

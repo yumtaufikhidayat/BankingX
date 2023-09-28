@@ -5,6 +5,7 @@ import com.taufik.bankingx.R
 import com.taufik.bankingx.model.activity.AllActivity
 import com.taufik.bankingx.model.home.Home
 import com.taufik.bankingx.model.transactions.AllTransactions
+import com.taufik.bankingx.model.wallet.AddWallet
 import com.taufik.bankingx.model.wallet.Wallet
 
 object DummyData {
@@ -209,5 +210,13 @@ object DummyData {
             )
         }
         return allTransactionsList
+    }
+
+    fun getAllWalletSkins(): ArrayList<AddWallet> {
+        val listSkins = ArrayList<AddWallet>()
+        listSkins.add(AddWallet(id = 1, backgroundResource = R.drawable.bg_card_skin_1))
+        listSkins.add(AddWallet(id = 2, backgroundResource = R.drawable.bg_card_skin_2))
+        listSkins.add(AddWallet(id = 3, backgroundResource = R.drawable.bg_card_skin_3))
+        return listSkins
     }
 }

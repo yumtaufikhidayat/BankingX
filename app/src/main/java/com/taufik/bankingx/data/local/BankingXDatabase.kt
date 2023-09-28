@@ -5,6 +5,7 @@ import androidx.room.RoomDatabase
 import com.taufik.bankingx.model.activity.AllActivity
 import com.taufik.bankingx.model.home.Home
 import com.taufik.bankingx.model.transactions.AllTransactions
+import com.taufik.bankingx.model.wallet.AddWallet
 import com.taufik.bankingx.model.wallet.Wallet
 
 @Database(
@@ -12,7 +13,8 @@ import com.taufik.bankingx.model.wallet.Wallet
         Wallet::class,
         AllActivity::class,
         Home::class,
-        AllTransactions::class
+        AllTransactions::class,
+        AddWallet::class
     ],
     version = 1,
     exportSchema = false
