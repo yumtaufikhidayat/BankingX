@@ -2,7 +2,6 @@ package com.taufik.bankingx.ui.home.fragment
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -79,7 +78,7 @@ class HomeFragment : Fragment() {
         AlertDialog.Builder(requireContext()).setTitle("Oops!")
             .setMessage("This feature is under development. We will get back soon.")
             .setCancelable(false)
-            .setPositiveButton("OK") { dialog, _, ->
+            .setPositiveButton("OK") { dialog, _ ->
             dialog.dismiss()
         }
             .show()
