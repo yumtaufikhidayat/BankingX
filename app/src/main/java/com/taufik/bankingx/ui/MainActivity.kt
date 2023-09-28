@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
             R.id.splashScreenFragment,
             R.id.homeFragment,
             R.id.transactionsFragment,
-            R.id.allTransactionsFragment -> {
+            R.id.allTransactionsFragment,
+            R.id.addWalletFragment -> {
                 showBottomNavigation(false)
                 showFabCardViewHome(false)
             }
