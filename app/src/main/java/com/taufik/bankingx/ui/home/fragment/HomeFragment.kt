@@ -70,18 +70,15 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun navigateScreen(direction: Int) {
-        findNavController().navigate(direction)
-    }
+    private fun navigateScreen(direction: Int) = findNavController().navigate(direction)
 
     private fun showAlertDialog() {
         AlertDialog.Builder(requireContext()).setTitle("Oops!")
             .setMessage("This feature is under development. We will get back soon.")
             .setCancelable(false)
             .setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss()
-        }
-            .show()
+                dialog.dismiss()
+        }.show()
     }
 
     override fun onDestroyView() {
