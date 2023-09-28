@@ -65,4 +65,9 @@
         android:name="com.taufik.bankingx.ui.transactions.fragment.AllTransactionsFragment"
         android:label="fragment_all_transactions"
         tools:layout="@layout/fragment_all_transactions" />
+    <fragment
+        android:id="@+id/addWalletFragment"
+        android:name="com.taufik.bankingx.ui.wallet.fragment.AddWalletFragment"
+        android:label="fragment_add_wallet"
+        tools:layout="@layout/fragment_add_wallet" />
 </navigation>
