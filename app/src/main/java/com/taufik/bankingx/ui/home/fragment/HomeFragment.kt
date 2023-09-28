@@ -1,5 +1,6 @@
 package com.taufik.bankingx.ui.home.fragment
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -25,10 +26,9 @@ class HomeFragment : Fragment() {
     private val viewModel by viewModels<HomeViewModel>()
     private val homeAdapter by lazy { HomeAdapter {
         when (it) {
-            0 -> Log.i("TAG1", "message: $it")
-            1 -> Log.i("TAG2", "message: $it")
+            0 -> navigateScreen(R.id.addWalletFragment)
+            1 -> showAlertDialog()
             2 -> navigateScreen(R.id.transactionsFragment)
-            else -> Log.i("TAG4", "message: $it")
         }
     } }
 
@@ -73,6 +73,16 @@ class HomeFragment : Fragment() {
 
     private fun navigateScreen(direction: Int) {
         findNavController().navigate(direction)
+    }
+
+    private fun showAlertDialog() {
+        AlertDialog.Builder(requireContext()).setTitle("Oops!")
+            .setMessage("This feature is under development. We will get back soon.")
+            .setCancelable(false)
+            .setPositiveButton("OK") { dialog, _, ->
+            dialog.dismiss()
+        }
+            .show()
     }
 
     override fun onDestroyView() {
