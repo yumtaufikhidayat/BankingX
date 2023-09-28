@@ -4,6 +4,7 @@
     <string name="txt_wallet">Wallet</string>
     <string name="txt_activity">Activity</string>
     <string name="txt_main_wallet">Main Wallet</string>
+    <string name="txt_xyz_wallet">XYZ Wallet</string>
     <string name="txt_wallet_balance">$45.500,12</string>
     <string name="txt_wallet_number">444 221 224 ***</string>
     <string name="txt_bottom_navigation_view">Bottom Navigation View</string>
@@ -16,7 +17,15 @@
     <string name="txt_transactions">Transactions</string>
     <string name="txt_statement">Statement</string>
     <string name="txt_search_here"><font size="15">Search here</font></string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="txt_add_wallet">Add Wallet</string>
+    <string name="txt_change_skin">Change skin</string>
+    <string name="txt_card_name">Card Name</string>
+    <string name="txt_card_number">Card Number</string>
+    <string name="txt_expired_date">Expired Date</string>
+    <string name="txt_cvv">CVV</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_cc_number">**** **** **** ****</string>
+    <string name="txt_cc_name">Your Name</string>
+    <string name="txt_card_exp_date_error">Card Expired Date Error</string>
+    <string name="txt_card_expired">Card Expired</string>
 </resources>
