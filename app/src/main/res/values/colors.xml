@@ -17,8 +17,14 @@
     <color name="green_200">#44A159</color>
     <color name="green_300">#009F5E</color>
     <color name="green_400">#90CE7B</color>
+    <color name="green_500">#34EA51</color>
+    <color name="green_600">#BBEA34</color>
     <color name="magenta_100">#FFC785</color>
     <color name="magenta_200">#DA1CC7</color>
     <color name="magenta_300">#CE83E0</color>
     <color name="orange_100">#FF922E</color>
+    <color name="blue_100">#343BEA</color>
+    <color name="blue_200">#34B3EA</color>
+    <color name="red_100">#EA3434</color>
+    <color name="red_200">#EA9634</color>
 </resources>
